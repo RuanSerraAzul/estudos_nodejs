@@ -43,7 +43,7 @@ app.get("/users/:id", async (req, res) => {
 
     const user = await User.findOne({ raw: true, where: { id: id } });
 
-    res.render("userview", { user });
+    res.render("userviews", { user });
 });
 
 app.get("/", async (req, res) => {
