@@ -1,0 +1,59 @@
+<h1>Editando: {{user.name}}</h1>
+<form action="/users/update" method="POST" class="form">
+    <input type="hidden" name="id" value="{{user.id}}" />
+    <div class="form-control">
+        <label for="name">Nome</label>
+        <input
+            type="text"
+            name="name"
+            value="{{user.name}}"
+            placeholder="Digite o nome do usuario"
+        />
+    </div>
+    <div class="form-control">
+        <label for="occupation">Profissão</label>
+        <input
+            type="text"
+            name="occupation"
+            placeholder="Digite sua profissão"
+            value="{{user.occupation}}"
+        />
+    </div>
+    <div class="form-control form-checkbox">
+        {{#if user.newsletter}}
+            <input type="checkbox" name="newsletter" checked />
+        {{else}}
+            <input type="checkbox" name="newsletter" />
+        {{/if}}
+        <label for="newsletter" checked>Enviar promoções?</label>
+
+    </div>
+
+    <input type="submit" class="btn btn-warning" value="Editar" />
+
+</form>
+
+<div class="address-container">
+    <h2>Endereços</h2>
+    <form action="/address/create" method="post">
+        <input type="hidden" name="UserId" value="{{user.id}}" />
+        <div class="form-control">
+            <label for="street">Rua</label>
+            <input type="text" name="street" placeholder="Digite sua rua" />
+        </div>
+        <div class="form-control">
+            <label for="number">Número</label>
+            <input type="text" name="number" placeholder="Digite o número" />
+        </div>
+        <div class="form-control">
+            <label for="city">Cidade</label>
+            <input type="text" name="city" placeholder="Digite sua cidade" />
+        </div>
+
+        <div class="form-control">
+
+            <input class="btn btn-success" type="submit" value="Cadastrar" />
+        </div>
+
+    </form>
+</div>
