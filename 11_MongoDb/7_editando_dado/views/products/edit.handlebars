@@ -7,6 +7,10 @@
         <input type="text" name="name" value="{{product.name}}" />
     </div>
     <div class="form-control">
+        <label for="image">Imagem:</label>
+        <input type="text" name="image" value="{{product.image}}" />
+    </div>
+    <div class="form-control">
         <label for="price">Preço do produto:</label>
         <input type="text" name="price" value="{{product.price}}" />
     </div>
@@ -17,9 +21,6 @@
             placeholder="Descrição do produto"
         >{{product.description}}</textarea>
     </div>
-    <div class="form-control">
-        <label for="image">Imagem:</label>
-        <input type="text" name="image" value="{{product.image}}" />
-    </div>
+
     <input type="submit" class="btn" value="Enviar" />
 </form>
