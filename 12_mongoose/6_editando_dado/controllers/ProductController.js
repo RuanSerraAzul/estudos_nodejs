@@ -57,9 +57,9 @@ module.exports = class ToughController {
         const description = req.body.description;
         const image = req.body.image;
 
-        const product = new Product(name, price, description, image);
+        const product = { name, price, description, image };
 
-        await product.updateProduct(id);
+        await Product.updateOne({ _id: id }, product);
 
         res.redirect("/products");
     }

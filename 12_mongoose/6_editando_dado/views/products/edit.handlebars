@@ -2,7 +2,7 @@
 <form action="/products/edit" method="POST">
     <div class="form-control">
 
-        <input type="hidden" name="_id" value="{{product.id}}" />
+        <input type="hidden" name="id" value="{{product._id}}" />
         <label for="name">Nome do produto:</label>
         <input type="text" name="name" value="{{product.name}}" />
     </div>
