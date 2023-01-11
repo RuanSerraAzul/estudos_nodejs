@@ -11,10 +11,6 @@ app.use(express.json());
 
 //endpoint
 
-app.get("/", (req, res) => {
-    res.json({
-        message: "Hello World, primeiro endpoint criado com sucesso",
-    });
-});
+app.get("/", (req, res) => {});
 
 app.listen(3000);
